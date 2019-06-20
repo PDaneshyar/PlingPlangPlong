@@ -39,6 +39,7 @@ describe "Tests for the PlingPlangPlong method" do
 
     it "should display an error message if the input is not a number" do
       expect(PlingPlangPlong("test")).to eq("The input needs to be a number!")
+      expect(PlingPlangPlong([1,2,3])).to eq("The input needs to be a number!")
     end
 
   end
