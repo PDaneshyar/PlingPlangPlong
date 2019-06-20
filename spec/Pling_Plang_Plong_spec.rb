@@ -28,9 +28,18 @@ describe "Tests for the PlingPlangPlong method" do
       expect(PlingPlangPlong(-10)).to eq("Plang")
     end
 
+    it "should work for decimal numbers" do
+      expect(PlingPlangPlong(10.0)).to eq("Plang")
+      expect(PlingPlangPlong(14.3)).to eq("14.3")
+    end
+
   end
 
-  context "These are the tests that should fail" do
+  context "These are the tests where the function should not work" do
+
+    it "should display an error message if the input is not a number" do
+      expect(PlingPlangPlong("test")).to eq("The input needs to be a number!")
+    end
 
   end
 
