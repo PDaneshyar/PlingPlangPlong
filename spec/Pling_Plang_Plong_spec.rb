@@ -3,14 +3,17 @@ describe "Tests for the PlingPlangPlong method" do
   context "These are the tests for the function working correctly" do
 
     it "should return the string Pling if there is a factor of 3" do
+      expect(PlingPlangPlong(3)).to eq("Pling")
       expect(PlingPlangPlong(9)).to eq("Pling")
     end
 
     it "should return the string Plang if there is a factor of 5" do
+      expect(PlingPlangPlong(5)).to eq("Plang")
       expect(PlingPlangPlong(10)).to eq("Plang")
     end
 
     it "should return the string Plong if there is a factor of 7" do
+      expect(PlingPlangPlong(7)).to eq("Plong")
       expect(PlingPlangPlong(14)).to eq("Plong")
     end
 
@@ -22,6 +25,7 @@ describe "Tests for the PlingPlangPlong method" do
 
     it "should return the number as a string if there are no factors of 3,5 or 7" do
       expect(PlingPlangPlong(8)).to eq("8")
+      expect(PlingPlangPlong(8)).to eq("11")
     end
 
     it "should work correctly for negative numbers" do
