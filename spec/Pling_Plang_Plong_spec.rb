@@ -1,6 +1,6 @@
 describe "Tests for the PlingPlangPlong method" do
 
-  context "These are the tests that should pass" do
+  context "These are the tests for the function working correctly" do
 
     it "should return the string Pling if there is a factor of 3" do
       expect(PlingPlangPlong(9)).to eq("Pling")
