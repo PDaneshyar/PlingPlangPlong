@@ -1,32 +1,26 @@
 def PlingPlangPlong(number)
 
+  map = {3 => "Pling", 5 => "Plang", 7 => "Plong", 9 => "Plung" }
+
   # empty string that will be altered depending on the input
   ans = ""
 
   #  checks the input was a number
   if(number.instance_of?(Integer) || number.instance_of?(Float))
     # if the input is a number carry out the function
-    # if it has no factors return the number as a string
-    if(number % 7 != 0 && number % 5 != 0 && number % 3 != 0)
+    map.each do |key, value|
+      if number % key == 0
+        ans += value
+      end
+    end
+
+    # if it has no relevant factors return the number as a string
+    if ans == ""
       ans = number.to_s
     end
-
-    # check factors of 3, 5, 7 concatenate string when true
-    if(number % 3 == 0)
-      ans += "Pling"
-    end
-
-    if(number % 5 == 0)
-      ans += "Plang"
-    end
-
-    if(number % 7 == 0)
-      ans += "Plong"
-    end
-  # if the input is not a number display error message
   else
       ans = "The input needs to be a number!"
   end
 
-  return ans
+  ans
 end
